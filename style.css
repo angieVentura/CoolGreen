@@ -177,6 +177,21 @@ p.nombre {
     flex-direction: column;
 }
 
+.textoProd{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    /*padding: 16px 0px 0 0;*/
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
 /* Estilos para pantallas grandes */
 .info-card {
     display: flex;
@@ -339,3 +354,12 @@ img.imginfo {
 .portada.pruducto {
     justify-content: center;
 }
+
+form{
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    color: #898ded;
+}
+
