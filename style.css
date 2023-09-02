@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Optima';
+    src: url('Optima/OptimaLTPro-Medium.otf') format('opentype'); /* Usa 'opentype' como formato para archivos .otf */
+    /* Otras propiedades opcionales, como font-weight y font-style, pueden configurarse aquí */
+}
+
+
+body {
+    font-family: 'Optima';
+}
+
+div#navbarsExample03 {
+    max-width: max-content;
+}
+
+.portada {
+    background: #ffd8f3;
+    width: 100%;
+    height: 561px;
+    display: flex;
+}
+
+.text {
+    width: 50%;
+    background: #ff00b3;
+    height: 561px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif {
+    width: 50%;
+    height: 561px;
+    background: blue;
+}
+
+img.mundito {
+    max-width: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+}
+
+h1.titulo {
+    color: #BD89ED;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.etiqueta {
+    background: #898DED;
+    color: #FFD8F3;
+    width: 160px;
+    text-align: center;
+}
+
+p.frase {
+    color: #BD89ED;
+}
