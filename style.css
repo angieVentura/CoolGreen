@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Optima';
-    src: url('Optima/OptimaLTPro-Medium.otf') format('opentype'); /* Usa 'opentype' como formato para archivos .otf */
+    src: url('Optima/OptimaLTPro-Medium.otf') format('opentype');
+    /* Usa 'opentype' como formato para archivos .otf */
     /* Otras propiedades opcionales, como font-weight y font-style, pueden configurarse aquí */
 }
 
@@ -15,15 +16,14 @@ div#navbarsExample03 {
 
 .portada {
     background: #ffd8f3;
-    width: 100%;
-    height: 561px;
+    padding: 40px 0px 40px 0px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .text {
     width: 50%;
-    background: #ff00b3;
-    height: 561px;
+    background: #ffd8f3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,13 +32,13 @@ div#navbarsExample03 {
 
 .gif {
     width: 50%;
-    height: 561px;
-    background: blue;
+    background: #ffd8f3;
 }
 
 img.mundito {
-    max-width: -webkit-fill-available;
+    max-width: 80%;
     max-height: -webkit-fill-available;
+    margin-left: 50px;
 }
 
 h1.titulo {
@@ -46,6 +46,7 @@ h1.titulo {
     text-align: center;
     font-weight: bolder;
     font-size: 60px;
+    margin: 40px 0px 20px 0;
 }
 
 .etiqueta {
@@ -53,8 +54,284 @@ h1.titulo {
     color: #FFD8F3;
     width: 160px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30px;
 }
 
 p.frase {
     color: #BD89ED;
+    font-size: 20px;
+}
+
+p.textoEtiqueta {
+    margin: 0;
+}
+
+
+@media (max-width: 1100px) {
+
+    .gif {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    img.mundito{
+        margin: 0;
+        width: 85%;
+    }
+    h1.titulo{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 990px) {
+
+    h1.titulo{
+        font-size: 43px;
+    }
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 850px) {
+    .portada {
+        flex-direction: column-reverse;
+        /* Cambia el orden de los elementos, poniendo el GIF debajo del texto */
+    }
+
+    .text {
+        width: 100%;
+        height: 400px;
+    }
+
+    .gif {
+        display: none;
+        /* Oculta el gif en pantallas más pequeñas */
+    }
+}
+
+
+
+.integrantes {
+    width: 100%;
+    /* Elimina la altura fija para que el contenedor se ajuste automáticamente */
+}
+
+h3.tituloInt {
+    text-align: center;
+    padding: 45px 0 30px 0;
+    font-weight: 900;
+    margin: 0;
+    color: #898DED;
+}
+
+.foto {
+    width: 200px;
+    background: #ffd8f3;
+    height: 220px;
+}
+
+.integrante {
+    width: 200px;
+    text-align: center;
+}
+
+p.nombre {
+    padding: 20px 0 10px 0;
+    color: #E26DCF;
+    margin: 0;
+    font-weight: 900;
+    font-size: 19px;
+}
+
+.cartas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 20px;
+    padding: 0 70px 10px 70px;
+    justify-items: center;
+    align-items: center;
+    overflow: auto;
+
+}
+
+
+.carousel {
+    width: 50%;
+    height: -webkit-fill-available;
+}
+
+.texto {
+    width: 50%;
+    height: 400px;
+    margin: 0;
+    /*padding: 16px 0px 0 0;*/
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilos para pantallas grandes */
+.info-card {
+    display: flex;
+    background: #ffd9f3;
+    height: 400px;
+}
+
+.inf-contenedor {
+    height: -webkit-fill-available;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.info {
+    font-size: 21px;
+    color: #bd89ed;
+    margin: 0;
+}
+
+h3.titulo {
+    padding: 0px 0 20px 0px;
+    font-weight: 900;
+    color: #BD89ED;
+}
+
+.carousel-contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: -webkit-fill-available;
+}
+
+.carousel {
+    width: 80%;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 850px) {
+
+    .texto {
+        width: 80%;
+        height: auto;
+    }
+
+    .info-card {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .carousel-contenedor.grafico {
+        order: 2;
+        /* Cambia el orden del carrusel a 2 (abajo) */
+    }
+
+    .texto.grafico {
+        order: 1;
+        /* Cambia el orden del texto a 1 (arriba) */
+    }
+
+    .inf-contenedor {
+        margin: 0px 0px 0px 0px;
+        padding: 35px 0px;
+    }
+
+    .carousel-contenedor {
+        margin: 0px 0px 40px 0px;
+    }
+
+    .inf-contenedor,
+    .carousel-contenedor {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.info-card.grafica {
+    background: white;
+}
+
+p.text-footer {
+    padding: 15px 0px 0px 0px;
+    font-size: 20px;
+    color: #FFD9F3;
+    margin: 0;
+    font-weight: 900;
+}
+
+.footer {
+    background: #898ded;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0px 20px 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+hr.Lfooter {
+    margin: auto;
+    height: 2px;
+    background-color: #ffd9f2;
+    width: 90%;
+}
+
+nav.navbar.navbar-expand-sm.navbar-dark{
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-dark .navbar-brand {
+    color: #898ded;
+}
+
+.navbar-dark .navbar-nav .nav-link.active{
+    color: #898ded;
+}
+
+#navbar {
+    position: fixed;
+    transition: background-color 0.3s; 
+   z-index: 1000;
+}
+
+.content {
+    margin-top: 70px; 
+}
+
+div#menu-elementos {
+    padding: 0px 60px 0px 60px;
+}
+
+li.nav-item {
+    padding: 0px 0px 0px 15px;
+}
+
+img.ft {
+    width: 200px;
+}
+
+img.imginfo {
+    max-width: 77%;
 }
